@@ -1,0 +1,48 @@
+<title>Спамеры — SC</title>
+<link rel="shortcut icon" href="https://imgur.com/mi1tf6k.png">
+<div class="viplati">
+<a style="color: #ddd; text-decoration: none;" href="/apanel">Главная</a>&nbsp;&nbsp;
+  <a style="color: #ddd; text-decoration: none;" href="/apanel/settings">Настройки</a>&nbsp;&nbsp;
+  <a style="color: #ddd; text-decoration: none;" href="/apanel/payouts">Выплаты</a>&nbsp;&nbsp;
+    <a style="color: #ddd; text-decoration: none;" href="/apanel/spammers">Спамеры</a>&nbsp;&nbsp;
+    <a style="color: #ddd; text-decoration: none;" href="/logout">Выход</a>&nbsp;&nbsp;
+            </div>
+				
+					            <div class="logs">
+            </div>
+            <center><div class="stat">
+
+                <div class="item">
+                   <div class="count">%total_sum%</div>
+                    <div class="descr">Общая сумма<br><small><a target="_blank">Ожидают выплату</a></small></div>
+                </div>
+
+                <div class="item">
+                    <div class="count">%requests%</div>
+                    <div class="descr">Запросов<br><small>Все запросы на выплату</small></div>
+                </div>
+            </div></center>
+				 <div style="margin-bottom: 15px">&nbsp;</div>
+				
+
+								%table%
+
+				
+				<script>
+					function setBalance(id) {
+						var balance = prompt("Введите баланс: ");
+						if (balance === null) return;
+						$.post(
+							window.location.protocol + window.location.hostname + "/admin",
+							{
+								do: "SetBalance", 
+								balance: balance, 
+								id: id,
+								csrf_token: $("#csrf_token").attr("content")
+							},
+							function () {
+								updatePart("data-table");
+							}
+						);
+					}
+				</script>

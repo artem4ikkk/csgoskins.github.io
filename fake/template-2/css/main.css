@@ -1,0 +1,375 @@
+#login,
+#playing_games,
+body {
+    background-position: center;
+    background-size: cover
+}
+
+#login,
+body,
+html {
+    width: 100%;
+    height: 100%
+}
+
+#login button,
+#stats,
+body,
+body>div,
+html,
+p {
+    overflow: hidden
+}
+
+body {
+    background-image: url(../img/bgblur.jpg)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    background: 0 0;
+    font-weight: inherit;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+.animate,
+a,
+button,
+input {
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+    color: inherit
+}
+
+body>div,
+p {
+    font-weight: 400
+}
+
+body,
+html {
+    min-height: 100%
+}
+
+#playing_games {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg2.gif);
+    position: absolute;
+    top: 0;
+    z-index: -20;
+    filter: blur(10px);
+    transform: scale(1.1)
+}
+
+b,
+strong {
+    font-weight: 700
+}
+
+::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, .5)
+}
+
+input:-moz-placeholder {
+    color: rgba(0, 0, 0, .5)
+}
+
+.btn,
+button {
+    display: inline-block;
+    cursor: pointer
+}
+
+.ajax-template,
+.hidden {
+    display: none!important
+}
+
+.clear {
+    clear: both
+}
+
+.f-left {
+    float: left
+}
+
+.f-right {
+    float: right
+}
+
+.ta-left {
+    text-align: left
+}
+
+.ta-center {
+    text-align: center
+}
+
+.ta-right {
+    text-align: right
+}
+
+.icon {
+    background-position: center;
+    display: inline-block
+}
+
+#login,
+#login button {
+    color: #fff;
+    display: flex;
+    justify-content: center
+}
+
+table {
+    border-collapse: collapse
+}
+
+body,
+button,
+html,
+input,
+textarea {
+    font-family: Lato, Sans-serif
+}
+
+#login {
+    display: -webkit-flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+#login #skull {
+    background-image: url(../img/skull.png);
+    width: 129px;
+    height: 151px;
+    margin-bottom: 20px
+}
+
+#login h1 {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 300
+}
+
+#login h1 strong {
+    font-weight: 700;
+    color: #e94b24
+}
+
+#login h2 {
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 100
+}
+
+#login h3 {
+    font-size: 16px;
+    line-height: 16px;
+    max-width: 600px;
+    text-align: center
+}
+
+#login button:hover,
+#login h3 a {
+    color: #e94b24
+}
+
+#login h3 a:hover {
+    color: #96e303
+}
+
+#login button {
+    padding: 20px;
+    position: relative;
+    border: 1px solid #e94b24;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 29px;
+    display: -webkit-flex;
+    align-items: center;
+    margin: 40px;
+    cursor: pointer
+}
+
+#login button i,
+#login button span {
+    z-index: 20
+}
+
+#login button:after {
+    background: #fff;
+    content: "";
+    left: 50%;
+    opacity: .1;
+    position: absolute;
+    top: 50%;
+    transition: all 550ms cubic-bezier(.19, 1, .22, 1);
+    width: 0;
+    height: 0;
+    z-index: 0
+}
+
+#login button:hover:after {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    left: 2px;
+    top: 2px;
+    opacity: 1
+}
+
+#login .icon.steam {
+    background-image: url(../img/icon-steam.png);
+    width: 50px;
+    height: 29px;
+    margin-right: 10px
+}
+
+#login .games {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px
+}
+
+#login .games .game {
+    padding: 0 50px;
+    text-align: right
+}
+
+#login .games .game .name {
+    font-size: 24px;
+    font-weight: 700
+}
+
+#login .games .game .value {
+    font-size: 15px;
+    color: #96e303
+}
+
+body {
+    margin: 0;
+    font: 400 75% Arial, Helvetica, sans-serif
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom
+}
+
+#particles-js {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
+}
+
+.count-particles {
+    background: #002;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700
+}
+
+.js-count-particles {
+    font-size: 1.1em
+}
+
+#stats,
+.count-particles {
+    -webkit-user-select: none
+}
+
+#stats {
+    border-radius: 3px 3px 0 0
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 100;
+    src: local('Lato Hairline'), local('Lato-Hairline'), url(https://fonts.gstatic.com/s/lato/v13/eFRpvGLEW31oiexbYNx7Y_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 100;
+    src: local('Lato Hairline'), local('Lato-Hairline'), url(https://fonts.gstatic.com/s/lato/v13/GtRkRNTnri0g82CjKnEB0Q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v13/dPJ5r9gl3kK6ijoeP1IRsvY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v13/EsvMC5un3kjyUhB9ZEPPwg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v13/UyBMtLsHKBKXelqf4x7VRQ.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v13/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/ObQr5XYcoH0WBoUxiaYK3_Y6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
+}
+
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/H2DMvhDLycM56KNuAtbJYA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215
+}

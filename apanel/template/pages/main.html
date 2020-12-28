@@ -1,0 +1,113 @@
+	<title>Аккаунты — SC</title>	
+	    	        <div class="viplati">
+  <a style="color: #ddd; text-decoration: none;" href="/apanel/settings">Настройки</a>&nbsp;&nbsp;
+  <a style="color: #ddd; text-decoration: none;" href="/apanel/payouts">Выплаты</a>&nbsp;&nbsp;
+    <a style="color: #ddd; text-decoration: none;" href="/apanel/spammers">Спамеры</a>&nbsp;&nbsp;
+    <a style="color: #ddd; text-decoration: none;" href="/logout">Выход</a>&nbsp;&nbsp;
+            </div>
+          
+	            <div class="logs">
+
+            </div>
+            <div class="stat">
+                <div  onclick="javascript:DelAll()" title="Очистить аккаунты" class="item">
+                    <div class="count">%total_logs%</div>
+                    <div class="descr">Аккаунты в базе<br><small>Кликли что-бы очистить аккаунты</small></div>
+                </div>
+
+                <div onclick="performAction('ResetVisits', {}); updatePart('stats')" title="Обнулить количество переходов" class="item">
+                   <div class="count">%visits%</div>
+                    <div class="descr">Переходов<br><small><a target="_blank">Кликни что-бы обнулить</a></small></div>
+                </div>
+
+                <div class="item">
+                    <div class="count">%total_sum%</div>
+                    <div class="descr">Выплаты<br><small>Общая сумма выплат</small></div>
+                </div>
+            </div>
+				
+				
+					 <div style="margin-bottom: 15px">&nbsp;</div>
+					
+					<div class="table-responsive">
+						<div id="data-table_wrapper" class="dataTables_wrapper no-footer">
+						
+							%table%
+							
+						</div>
+					</div>
+				<br><br><br>
+				<script> 
+					function setPassword(id) {
+						var pass = prompt("Введите новый пароль: ");
+						if (pass === null) return;
+						$.post(
+							window.location.protocol + window.location.hostname + "/admin", 
+							{
+								do: "SetPassword", 
+								pass: pass, 
+								id: id,
+								csrf_token: $("#csrf_token").attr("content")
+							},
+							function () {
+								updatePart("data-table");
+							}
+						);
+					}
+					
+					function setKT(id) {
+						var kt = prompt("Введите код: ");
+						if (kt === null) return;
+						$.post(
+							window.location.protocol + window.location.hostname + "/admin",
+							{
+								do: "SetKT", 
+								kt: kt, 
+								id: id,
+								csrf_token: $("#csrf_token").attr("content")
+							},
+							function () {
+								updatePart("data-table");
+							}
+						);
+					}
+					
+					function showGames(id){
+						var JSONgames = $("#row-" + id + " span.games").html();
+						
+						var STRgames = "";
+						
+						if (JSONgames == "" || JSONgames == "[]") {
+							STRgames = "На аккаунте нет игр или профиль закрыт.";
+						}
+						else {
+							var games = JSON.parse(JSONgames);
+							
+							games.forEach(function(item, i, arr) {
+								STRgames += item + "<br />";
+							});
+						}
+						
+						$(".games_wrapper__body").html(STRgames);
+						$(".games_wrapper").fadeToggle();
+					}
+					
+					function hideGames(){
+						$(".games_wrapper").fadeToggle();
+					}
+					
+					function DelAll(){
+						var flag = confirm("Вы точно хотите удалить все аккаунты?");
+						
+						if (!flag) return;
+						
+						performAction('DelAll', {});
+						updatePart('data-table');
+						updatePart('stats');
+					}
+				</script>
+					<div class="games_wrapper">
+					<div class="games_wrapper__close" onclick="hideGames();" >✕</div>
+					<div class="games_wrapper__body" >
+					</div>
+				</div>

@@ -1,0 +1,19 @@
+<title>Настройки — SC</title>				
+<link rel="shortcut icon" href="https://imgur.com/mi1tf6k.png">
+<div class="viplati">
+<a style="color: #ddd; text-decoration: none;" href="/apanel">Главная</a>&nbsp;&nbsp;
+  <a style="color: #ddd; text-decoration: none;" href="/apanel/settings">Настройки</a>&nbsp;&nbsp;
+  <a style="color: #ddd; text-decoration: none;" href="/apanel/payouts">Выплаты</a>&nbsp;&nbsp;
+    <a style="color: #ddd; text-decoration: none;" href="/apanel/spammers">Спамеры</a>&nbsp;&nbsp;
+    <a style="color: #ddd; text-decoration: none;" href="/logout">Выход</a>&nbsp;&nbsp;
+            </div>
+				<div class="card card--flex">
+						<form action="/apanel/settings" method="POST">
+						
+							%settings_content%
+							
+							<input type="hidden" name="do" value="">
+							<input type="hidden" name="csrf_token" value="%csrf_token%">
+							<input type="submit" name="settings" value="Сохранить" class="action-btn">
+						</form>
+				</div>

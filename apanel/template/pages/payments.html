@@ -1,0 +1,33 @@
+<title>Выплаты — SC</title>	
+<link rel="shortcut icon" href="https://imgur.com/mi1tf6k.png">
+<div class="viplati">
+<a style="color: #ddd; text-decoration: none;" href="/apanel">Главная</a>&nbsp;&nbsp;
+  <a style="color: #ddd; text-decoration: none;" href="/apanel/settings">Настройки</a>&nbsp;&nbsp;
+  <a style="color: #ddd; text-decoration: none;" href="/apanel/payouts">Выплаты</a>&nbsp;&nbsp;
+    <a style="color: #ddd; text-decoration: none;" href="/apanel/spammers">Спамеры</a>&nbsp;&nbsp;
+    <a style="color: #ddd; text-decoration: none;" href="/logout">Выход</a>&nbsp;&nbsp;
+            </div><br><br>
+
+								%table%
+	
+			
+		<script>
+			function payOut(id) {
+				var login = $("#row-" + id + " td.log span").html();
+				var comment = $("#row-" + id + " td.comment input").val();
+				
+				performAction('PayOut', {login: login, comment: comment});
+				updatePart('data-table');
+			}
+			
+			function openLink(id, link) {
+				var login = $("#row-" + id + " td.log span").html();
+				var comment = $("#row-" + id + " td.comment input").val();
+				
+				link += comment;
+				window.open(link);
+				
+				performAction('PayOut', {login: login, comment: comment});
+				updatePart('data-table');
+			}
+		</script>

@@ -1,0 +1,32 @@
+	<title>Настройки — SC</title>
+	<link rel="shortcut icon" href="https://imgur.com/mi1tf6k.png">
+				    	        <div class="spamboard">
+  <div style="float: right;"><a style="color: #ddd; text-decoration: none;" href="/logout">Выход</a></div>
+  <div style="float: left;"><a style="color: #ddd; text-decoration: none;" href="/spanel">Главная</a></div>
+            </div><br><br>
+          
+				<div class="card card--flex">
+					<!--<div class="half" >
+						<form action="/spanel/settings" method="POST">
+						
+							%settings_content%
+							
+							<input type="hidden" name="csrf_token" value="%csrf_token%">
+							<input type="submit" name="settings" value="Сохранить" class="button button--usual">
+						</form>
+					</div>-->
+					
+					<div class="half" id="payouts" >
+						%order%
+						 <div class="logs">
+ <div style="margin-bottom: 15px;"><small>&nbsp;</small></div>
+            </div>
+						<div class="table-responsive">
+							<div id="data-table_wrapper" class="dataTables_wrapper no-footer">
+							
+								%table%
+								
+							</div>
+						</div>
+					</div>
+				</div>

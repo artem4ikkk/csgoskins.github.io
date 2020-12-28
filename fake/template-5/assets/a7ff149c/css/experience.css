@@ -1,0 +1,65 @@
+.dial-experience {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: block;
+  margin: 0 auto;
+}
+.dial-experience .wrapper {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 50%;
+  top: 50%;
+  margin-left: -90px;
+  margin-top: -90px;
+  border-radius: 200px;
+}
+.dial-experience .knob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  border-radius: 300px;
+  -webkit-user-select: none;
+}
+.dial-experience span {
+  display: block;
+  text-align: center;
+}
+.dial-experience span.title {
+  color: #948f8f;
+}
+.dial-experience .center {
+  background: inherit;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  z-index: 1;
+  -webkit-user-select: none;
+  width: 150px;
+}
+.dial-experience .progress {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: transparent;
+}
+.dial-experience .congratz {
+  display: none;
+  position: absolute;
+  color: white;
+  width: 100%;
+  left: 100px;
+}
+.dial-experience span.exp-current,
+.dial-experience span.exp-to-reach {
+  display: inline;
+}

@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background: #121c25;
+    color: #d5d5d5;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.loginpage {
+    text-align: center;
+    margin-top: 180px;
+}
+
+.refcode {
+    display: block;
+    height: 60px;
+    width: 250px;
+    margin: 25px auto;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    color: #3a3a3a;
+    border: none;
+    outline: none;
+}
+
+.stat {
+    display: table;
+}
+
+.stat .item {
+    padding: 5px;
+    width: 316px;
+    height: 60px;
+    background: #15514d;
+    float: left;
+    margin-right: 10px;
+}
+
+.stat .item:last-child {
+    margin-right: 0px;
+}
+
+.stat .item .count {
+    display: table-cell;
+    padding-left: 8px;
+    padding-right: 15px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 26px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.stat .item .descr {
+    display: table-cell;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.logs {
+    margin-top: 30px;
+}
+
+.logs .logsarea {
+    width: calc(100% - 10px);
+    min-height: 500px;
+    border: none;
+    outline: none;
+    color: #ddd;
+    padding: 5px;
+    background: #1a2229;
+}
+
+.logs a {
+    color: #ddd;
+}
+
+
+.logs .mdi-check {
+    color: #34bd34;
+}
+
+.logs .mdi-close {
+    color: #ff6969;
+}
+
+.logs table {
+    width: 100%;
+}
+
+.logs table th {
+    text-align: left;
+    background-color: #252e35;
+    height: 50px;
+    line-height: 50px;
+}
+
+.logs table td {
+    height: 50px;
+    line-height: 50px;
+}
+
+.logs table tr:last-child td {
+    border-bottom: none;
+}
+
+.logs table tr td {
+    background-color: #2b363e;
+    border-bottom: solid 1px #333e46;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.logs table tr:hover td {
+    background-color: #35444e;
+}
+
+
+.icon-csgo {
+    width: 106px;
+    height: 21px;
+    display: inline-block;
+    background-image: url('../cp_images/csgo.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center center;
+
+}
+
+.icon-pubg {
+    width: 159px;
+    height: 21px;
+    display: inline-block;
+    background-image: url('../cp_images/pubg.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center center;
+}
